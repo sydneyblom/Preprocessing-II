@@ -1,21 +1,58 @@
-.home {
 
+
+
+
+
+.home {
+  padding: 0 40px;
+
+  .photoheader {
+    margin: 0 1%;
+    padding: 0px auto;
+    
+  }
+  .welcome {
+h2 {
+  padding-top: 2%;
+}
+p{
+  padding-bottom: 2%;
+}
+    border-bottom: 2px dashed @navigation-border;
+  }
+
+  
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      margin: 0 auto;
+      padding: 0 auto;
+    }
     
     .text-content {
       width: 48%;
+      padding-top: 10%;
       padding-right: 1%;
+      @media @mobile {
+      padding: 0 auto;
+      width:95%;
+    
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @mobile {
+        width:95%;
+      }
 
       img {
         border-radius: 10px;
@@ -26,10 +63,16 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+      align-content: center;
+    }
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+  
     }
 
     .img-content {
@@ -45,6 +88,11 @@
     img {
       border-radius: 10px;
     }
+    @media @mobile {
+      padding-top: 10%;
+      width:95%;
+    
+      }
   }
 
   .content-pick {
@@ -52,10 +100,30 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
-
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      }
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 95%;
+        .btn {
+          .custom-btn(80%,15%,white,teal); 
+          margin: 0 9%;
+          font-size: 10px;
+        }
+      }
     }
   }
 }// home
+
+.btn {
+  .custom-btn(80%,15%,white,teal); 
+}
